@@ -973,6 +973,9 @@ UIColor* raisedColor = [UIColor colorWithRed:0.035 green:0.035 blue:0.035 alpha:
 
     // Disable updates
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"automaticallyCheckForUpdates"];
+
+    // Don't show uYou's welcome screen cuz it's currently broken (fix #1147)
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"showedWelcomeVC"];
  
     // Disable broken options of uYou
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"disableAgeRestriction"];
